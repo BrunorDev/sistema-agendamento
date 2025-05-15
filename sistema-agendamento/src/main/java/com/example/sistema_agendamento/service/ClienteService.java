@@ -19,25 +19,25 @@ public class ClienteService {
     @Autowired
     private ClienteMapper clienteMapper;
 
-    public ClienteResponse cadastrar(ClienteRequest request) {
+    public ClienteResponse criarCliente(ClienteRequest request) {
         Cliente cliente = clienteMapper.toCliente(request);
         Cliente clienteSalvo = clienteRepository.save(cliente);
         return clienteMapper.toClienteResponse(clienteSalvo);
     }
 
-    public List<ClienteResponse> listarTodos() {
+    public List<ClienteResponse> listarClientes() {
         List<Cliente> clientes = clienteRepository.findAll();
         return clienteMapper.toClienteResponseList(clientes);
     }
 
-    public ClienteResponse listarPorId(Long id) {
+    public ClienteResponse buscarClientePorId(Long id) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
 
         return clienteMapper.toClienteResponse(cliente);
     }
 
-    public ClienteResponse atualizar(long id, ClienteRequest request) {
+    public ClienteResponse atualizarCliente(long id, ClienteRequest request) {
         Cliente cliente = clienteRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
 
@@ -50,7 +50,7 @@ public class ClienteService {
         return clienteMapper.toClienteResponse(cliente);
     }
 
-    public void deletar(Long id) {
+    public void deletarCliente(Long id) {
         if (!clienteRepository.existsById(id)) {
             throw new RuntimeException("Cliente não encontrado");
         }
