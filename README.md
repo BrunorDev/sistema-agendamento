@@ -1,3 +1,4 @@
+
 # 🗓️ Sistema de Agendamentos
 
 Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de agendamentos entre clientes e serviços. É possível cadastrar clientes, serviços e realizar agendamentos para datas e horários específicos.
@@ -28,18 +29,23 @@ Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de ag
 
 ## 📂 Estrutura do Projeto
 
+```text
 src
 └── main
-├── java
-│ └── com.exemplo.agendamentos
-│ ├── controller
-│ ├── service
-│ ├── model
-│ ├── repository
-│ ├── dto
-│ └── mapper
-└── resources
-├── application.properties
+    ├── java
+    │   └── com.exemplo.agendamentos
+    │       ├── controller
+    │       ├── service
+    │       ├── model
+    │       ├── repository
+    │       ├── dto
+    │       └── mapper
+    └── resources
+        ├── application.properties
+        └── data.sql (opcional)
+```
+
+---
 
 ## 🧪 Exemplos de Requisição
 
@@ -52,50 +58,55 @@ POST /clientes
   "email": "joao@email.com",
   "telefone": "11999998888"
 }
+```
 
 ### 🔹 Criar Serviço
+
+```json
 POST /servicos
 {
   "nome": "Corte de cabelo",
   "preco": 50.0
 }
+```
 
 ### 🔹 Criar Agendamento
+
+```json
 POST /agendamentos
 {
   "clienteId": 1,
   "servicoId": 2,
   "dataHora": "2025-05-20T14:00:00"
 }
+```
 
-###🔹 Buscar Agendamentos por Data
-bash
-Copiar
-Editar
+### 🔹 Buscar Agendamentos por Data
+
+```
 GET /agendamentos?data=2025-05-20
+```
 
-🛠️ Como Rodar o Projeto
-Clone o repositório:
+---
 
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/sistema-agendamentos.git
-Configure o banco de dados MySQL no application.properties:
+## 🛠️ Como Rodar o Projeto
 
-properties
-Copiar
-Editar
-spring.datasource.url=jdbc:mysql://localhost:3306/agendamentos
-spring.datasource.username=root
-spring.datasource.password=sua_senha
-spring.jpa.hibernate.ddl-auto=update
-Execute o projeto pela IDE ou via terminal:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-agendamentos.git
+   ```
 
-arduino
-Copiar
-Editar
-./mvnw spring-boot:run
+2. Configure o banco de dados MySQL no `application.properties`:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/agendamentos
+   spring.datasource.username=root
+   spring.datasource.password=sua_senha
+   spring.jpa.hibernate.ddl-auto=update
+   ```
 
-
+3. Execute o projeto pela IDE ou via terminal:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+---
 
