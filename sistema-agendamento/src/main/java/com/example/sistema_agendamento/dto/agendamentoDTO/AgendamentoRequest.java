@@ -1,5 +1,6 @@
 package com.example.sistema_agendamento.dto.agendamentoDTO;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

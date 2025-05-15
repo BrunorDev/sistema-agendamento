@@ -1,5 +1,6 @@
 package com.example.sistema_agendamento.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Agendamento {
     private Long id;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 

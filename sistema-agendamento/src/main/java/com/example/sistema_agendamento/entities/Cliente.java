@@ -1,5 +1,6 @@
 package com.example.sistema_agendamento.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,5 +25,6 @@ public class Cliente {
     private String telefone;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonManagedReference
     private List<Agendamento> agendamentos;
 }
