@@ -8,7 +8,7 @@ Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de ag
 
 - **Java 22+**
 - **Spring Boot**
-- **Spring MVC
+- **Spring MVC**
 - **Spring Data JPA**
 - **MySQL**
 - **Maven**
@@ -26,4 +26,20 @@ Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de ag
   - Filtro de agendamentos por data
 
 ---
+
+
+---
+
+## 🧪 Exemplos de Requisição
+
+### 🔹 Criar Cliente
+
+```json
+POST /clientes
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "telefone": "11999998888"
+}
+
 
