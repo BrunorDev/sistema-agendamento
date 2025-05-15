@@ -1,4 +1,3 @@
-
 # 🗓️ Sistema de Agendamentos
 
 Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de agendamentos entre clientes e serviços. É possível cadastrar clientes, serviços e realizar agendamentos para datas e horários específicos.
@@ -34,15 +33,15 @@ src
 └── main
     ├── java
     │   └── com.exemplo.agendamentos
+    │       ├── config
     │       ├── controller
-    │       ├── service
-    │       ├── model
-    │       ├── repository
     │       ├── dto
-    │       └── mapper
+    │       ├── entity
+    │       ├── mapper
+    │       ├── repository
+    │       └── service
     └── resources
-        ├── application.properties
-        └── data.sql (opcional)
+        └── application.properties
 ```
 
 ---
@@ -108,5 +107,7 @@ GET /agendamentos?data=2025-05-20
    ```bash
    ./mvnw spring-boot:run
    ```
+
 ---
+
 
