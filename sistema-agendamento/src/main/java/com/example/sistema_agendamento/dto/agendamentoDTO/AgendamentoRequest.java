@@ -1,5 +1,6 @@
 package com.example.sistema_agendamento.dto.agendamentoDTO;
 
+import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AgendamentoRequest {
 
+    @NotNull
     private Long clienteId;
+
+    @NotNull
     private Long servicoId;
+
+    @NotNull
+    @FutureOrPresent
     private LocalDateTime dataHora;
 }
