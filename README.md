@@ -11,6 +11,7 @@ Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de ag
 - **Spring Data JPA**
 - **MySQL**
 - **Maven**
+- **Loombock**
 - **ModelMapper** (para conversão de entidades para DTOs)
 
 ---
@@ -26,24 +27,15 @@ Projeto backend desenvolvido em Java com Spring Boot, simulando um sistema de ag
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-```text
-src
-└── main
-    ├── java
-    │   └── com.exemplo.agendamentos
-    │       ├── config
-    │       ├── controller
-    │       ├── dto
-    │       ├── entity
-    │       ├── mapper
-    │       ├── repository
-    │       └── service
-    └── resources
-        └── application.properties
-```
-
+- **Config: Configuração do ModelMapper e Swagger**
+- **Controller: Recebe e processa as requisições HTTP.**
+- **dto: Objetos de transferência de dados (Data Transfer Objects)**
+- **Entity: Entidades JPA representando as tabelas do banco**
+- **Service: Contém a Regra de negócio da aplicação.**
+- **Repository: Interface para comunicação com o banco de dados.**
+- **Mapper: Conversão entre entidades e DTOs (ModelMapper, por exemplo)**
 ---
 
 ## 🧪 Exemplos de Requisição
