@@ -88,26 +88,32 @@ GET /agendamentos?data=2025-05-20
 
 ---
 
-## 🛠️ Como Rodar o Projeto
+## 🔧 Configuração do Projeto
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/sistema-agendamentos.git
-   ```
+Clone o repositório:
 
-2. Configure o banco de dados MySQL no `application.properties`:
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/agendamentos
-   spring.datasource.username=root
-   spring.datasource.password=sua_senha
-   spring.jpa.hibernate.ddl-auto=update
-   ```
+```bash
+git clone <URL do repositório>
+```
 
-3. Execute o projeto pela IDE ou via terminal:
-   ```bash
-   ./mvnw spring-boot:run
-   ```
+Acesse a pasta do projeto:
 
+```bash
+cd Produtos-API
+```
+
+Configure as dependências com o Maven:
+
+```bash
+mvn clean install
+```
+
+Execute a aplicação:
+
+```bash
+mvn spring-boot:run
+```
 ---
-
+## 📌 Considerações Finais
+Desenvolvido por [Bruno Reis 👨‍💻](https://www.linkedin.com/in/bruno-reis-oliveira/)
 
